@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sinai Industries Limited | Premium Construction Materials</title>
+    <meta name="description" content="Global standard supplier of mabati, steel, and construction materials.">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:wght@500;700;800;900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Montserrat', 'sans-serif'],
+                    },
+                    colors: {
+                        industrial: {
+                            900: '#0B1120', // Deep Navy / Pitch
+                            800: '#1E293B', // Steel Slate
+                            100: '#F8FAFC', // Light Steel
+                        },
+                        accent: {
+                            500: '#F97316', // Safety Orange
+                            600: '#EA580C', // Deep Orange
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom Loader & Utilities */
+        #loader { transition: opacity 0.5s ease-out; }
+        .glass-nav { background: rgba(11, 17, 32, 0.85); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255,255,255,0.05); }
+        .text-gradient { background: linear-gradient(to right, #ffffff, #94a3b8); background-clip: text; -webkit-background-clip: text; color: transparent; -webkit-text-fill-color: transparent; }
+        .filter-btn.active { background-color: #F97316; color: white; border-color: #F97316; }
+    </style>
+</head>
+<body class="bg-industrial-100 text-industrial-800 font-sans antialiased overflow-x-hidden">
+
+    <div id="loader" class="fixed inset-0 z-50 flex items-center justify-center bg-industrial-900">
+        <div class="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-accent-500"></div>
+    </div>
+
+    <nav id="navbar" class="fixed w-full z-40 transition-all duration-300 py-4 bg-transparent">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center">
+                <a href="#" class="flex items-center gap-2">
+                    <i class="fa-solid fa-industry text-accent-500 text-3xl"></i>
+                    <span class="font-heading font-black text-2xl tracking-tighter text-white">SINAI<span class="text-accent-500">.</span></span>
+                </a>
+                
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#about" class="text-sm font-medium text-gray-300 hover:text-white transition">About</a>
+                    <a href="#products" class="text-sm font-medium text-gray-300 hover:text-white transition">Products</a>
+                    <a href="#why-us" class="text-sm font-medium text-gray-300 hover:text-white transition">Why Us</a>
+                    <a href="#projects" class="text-sm font-medium text-gray-300 hover:text-white transition">Projects</a>
+                    <a href="#contact" class="px-5 py-2.5 bg-accent-500 hover:bg-accent-600 text-white text-sm font-bold rounded shadow-lg shadow-accent-500/30 transition-all transform hover:-translate-y-0.5">Get Quote</a>
+                </div>
+
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-white hover:text-accent-500 focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div id="mobile-menu" class="hidden md:hidden absolute w-full bg-industrial-900 border-t border-gray-800 mt-4 backdrop-blur-lg">
+            <div class="px-4 pt-2 pb-6 space-y-2 shadow-2xl">
+                <a href="#about" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white hover:bg-industrial-800 rounded">About</a>
+                <a href="#products" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white hover:bg-industrial-800 rounded">Products</a>
+                <a href="#contact" class="block px-3 py-2 text-base font-bold text-accent-500 hover:bg-industrial-800 rounded">Request Quote</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="relative h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="construction.jpg" alt="Construction Site" class="w-full h-full object-cover object-center scale-105 transform hover:scale-100 transition-transform duration-[10s] ease-out">
+            <div class="absolute inset-0 bg-industrial-900/80"></div> </div>
+        
+        <div class="relative z-10 text-center px-4 max-w-5xl mx-auto mt-20" data-aos="fade-up" data-aos-duration="1000">
+            <span class="text-accent-500 font-bold tracking-widest uppercase text-sm mb-4 block">Building The Future</span>
+            <h1 class="font-heading font-black text-5xl md:text-7xl text-white mb-6 leading-tight text-gradient">
+                ENGINEERED FOR <br> STRUCTURAL EXCELLENCE
+            </h1>
+            <p class="text-gray-300 text-lg md:text-xl mb-10 max-w-2xl mx-auto font-light">
+                Sinai Industries Limited is the premier supplier of high-grade roofing, steel bars, and heavy-duty building materials for world-class construction projects.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#products" class="px-8 py-4 bg-accent-500 hover:bg-accent-600 text-white font-bold rounded transition-all transform hover:-translate-y-1 shadow-lg shadow-accent-500/25">
+                    View Products
+                </a>
+                <a href="#contact" class="px-8 py-4 bg-transparent border-2 border-white/20 hover:border-white text-white font-bold rounded backdrop-blur-sm transition-all hover:bg-white/5">
+                    Discuss Your Project
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-24 bg-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div data-aos="fade-right">
+                    <h2 class="font-heading font-bold text-4xl md:text-5xl text-industrial-900 mb-6">Forge Ahead with Confidence</h2>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Sinai Industries Limited is the backbone of monumental construction projects accross the region.
+                         We do not just supply materials; we deliver structural integrity. 
+                    </p>
+                    <p class="text-gray-600 mb-8 leading-relaxed">
+                        From precision-engineered Mabati (roofing sheets) to high-tensile steel bars and bespoke rubber products, our inventory meets stringent international quality standards, ensuring your projects stand the test of time.
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-8" id="counter-section">
+                        <div>
+                            <p class="text-4xl font-heading font-black text-industrial-900"><span class="counter" data-target="5">0</span>+</p>
+                            <p class="text-sm text-accent-500 font-bold uppercase tracking-wider mt-1">Years Experience</p>
+                        </div>
+                        <div>
+                            <p class="text-4xl font-heading font-black text-industrial-900"><span class="counter" data-target="42">0</span>+</p>
+                            <p class="text-sm text-accent-500 font-bold uppercase tracking-wider mt-1">Projects Supplied</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative" data-aos="fade-left">
+                    <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=2070&auto=format&fit=crop" alt="Steel Manufacturing" class="rounded-lg shadow-2xl relative z-10 grayscale hover:grayscale-0 transition-all duration-500">
+                    <div class="absolute -bottom-6 -left-6 w-full h-full border-2 border-accent-500 rounded-lg z-0"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="products" class="py-24 bg-industrial-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="font-heading font-bold text-4xl text-industrial-900 mb-4">Our Industrial Catalog</h2>
+                <div class="w-24 h-1 bg-accent-500 mx-auto"></div>
+            </div>
+
+            <div class="flex flex-wrap justify-center gap-4 mb-12" data-aos="fade-up" data-aos-delay="100">
+                <button class="filter-btn active px-6 py-2 border border-gray-300 rounded-full text-sm font-semibold transition" data-filter="all">All Products</button>
+                <button class="filter-btn px-6 py-2 border border-gray-300 rounded-full text-sm font-semibold transition hover:border-accent-500 hover:text-accent-500" data-filter="roofing">Roofing & Mabati</button>
+                <button class="filter-btn px-6 py-2 border border-gray-300 rounded-full text-sm font-semibold transition hover:border-accent-500 hover:text-accent-500" data-filter="steel">Steel & Tubes</button>
+                <button class="filter-btn px-6 py-2 border border-gray-300 rounded-full text-sm font-semibold transition hover:border-accent-500 hover:text-accent-500" data-filter="wire">Wire & Nails</button>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-7" id="product-grid">
+                <div class="product-item roofing group bg-white rounded-xl overflow-hidden shadow-md hover:shadow-2xl transition duration-300" data-aos="fade-up">
+                    <div class="h-56 overflow-hidden relative">
+                        <img src="Boxmaiin.jpg" alt="Box Profile Mabati 30G" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                        <div class="absolute top-3 left-3 px-3 py-1 rounded-full bg-industrial-900/80 text-white text-xs font-semibold">Box Profile -  26G, 28G & 30G</div>
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                            <a href="#contact" class="px-5 py-2 bg-accent-500 text-white text-sm font-bold rounded transform translate-y-4 group-hover:translate-y-0 transition">Inquire Now</a>
+                        </div>
+                    </div>
+                    <div class="p-5 border-t border-gray-100">
+                        <h3 class="font-heading font-bold text-lg text-industrial-900 mb-2">
+                            Premium Box Profile Mabati
+                        </h3>
+                        <p class="text-gray-500 text-sm">
+                            Strong, modern roofing with durable thickness options for every budget.
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="product-item roofing group bg-white rounded-xl overflow-hidden shadow-md hover:shadow-2xl transition duration-300" data-aos="fade-up" data-aos-delay="180">
+                    <div class="h-56 overflow-hidden relative">
+                        <img src="it4new.jpg" alt="IT4 Profile Mabati" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                        <div class="absolute top-3 left-3 px-3 py-1 rounded-full bg-industrial-900/80 text-white text-xs font-semibold">IT4 Profile - 26G, 28G & 30G</div>
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                            <a href="#contact" class="px-5 py-2 bg-accent-500 text-white text-sm font-bold rounded transform translate-y-4 group-hover:translate-y-0 transition">Inquire Now</a>
+                        </div>
+                    </div>
+                    <div class="p-5 border-t border-gray-100">
+                        <h3 class="font-heading font-bold text-lg text-industrial-900 mb-2">IT4 Mabati Sheets</h3>
+                        <p class="text-gray-500 text-sm">Sharp rib geometry for excellent run-off, clean lines and dependable weather protection.</p>
+                    </div>
+                </div>
+
+                <div class="product-item roofing group bg-white rounded-xl overflow-hidden shadow-md hover:shadow-2xl transition duration-300" data-aos="fade-up">
+                    <div class="h-56 overflow-hidden relative">
+                        <img src="it5.webp" alt="IT5 Profile Mabati" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                        <div class="absolute top-3 left-3 px-3 py-1 rounded-full bg-industrial-900/80 text-white text-xs font-semibold">IT5 Profile - 26G, 28G & 30G</div>
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                            <a href="#contact" class="px-5 py-2 bg-accent-500 text-white text-sm font-bold rounded transform translate-y-4 group-hover:translate-y-0 transition">Inquire Now</a>
+                        </div>
+                    </div>
+                    <div class="p-5 border-t border-gray-100">
+                        <h3 class="font-heading font-bold text-lg text-industrial-900 mb-2">IT5 Mabati Sheets</h3>
+                        <p class="text-gray-500 text-sm">Deeper profile option suited for industrial roofs requiring stronger channel definition.</p>
+                    </div>
+                </div>
+
+                <div class="product-item roofing group bg-white rounded-xl overflow-hidden shadow-md hover:shadow-2xl transition duration-300" data-aos="fade-up" data-aos-delay="60">
+                    <div class="h-56 overflow-hidden relative">
+                        <img src="corrugated.webp" alt="Corrugated Mabati" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                        <div class="absolute top-3 left-3 px-3 py-1 rounded-full bg-industrial-900/80 text-white text-xs font-semibold">Corrugated - 26G, 28G & 30G</div>
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                            <a href="#contact" class="px-5 py-2 bg-accent-500 text-white text-sm font-bold rounded transform translate-y-4 group-hover:translate-y-0 transition">Inquire Now</a>
+                        </div>
+                    </div>
+                    <div class="p-5 border-t border-gray-100">
+                        <h3 class="font-heading font-bold text-lg text-industrial-900 mb-2">Corrugated Mabati</h3>
+                        <p class="text-gray-500 text-sm">Classic wave profile built for practical coverage and cost-effective roofing works.</p>
+                    </div>
+                </div>
+
+                <div class="product-item roofing group bg-white rounded-xl overflow-hidden shadow-md hover:shadow-2xl transition duration-300" data-aos="fade-up" data-aos-delay="120">
+                    <div class="h-56 overflow-hidden relative">
+                        <img src="versatile.jpg" alt="Versatile Profile Mabati" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                        <div class="absolute top-3 left-3 px-3 py-1 rounded-full bg-industrial-900/80 text-white text-xs font-semibold">Versatile - 26G, 28G & 30G</div>
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                            <a href="#contact" class="px-5 py-2 bg-accent-500 text-white text-sm font-bold rounded transform translate-y-4 group-hover:translate-y-0 transition">Inquire Now</a>
+                        </div>
+                    </div>
+                    <div class="p-5 border-t border-gray-100">
+                        <h3 class="font-heading font-bold text-lg text-industrial-900 mb-2">Versatile Profile Mabati</h3>
+                        <p class="text-gray-500 text-sm">Modern low-rib finish that gives homes and offices a clean architectural look.</p>
+                    </div>
+                </div>
+
+                <div class="product-item roofing group bg-white rounded-xl overflow-hidden shadow-md hover:shadow-2xl transition duration-300" data-aos="fade-up" data-aos-delay="180">
+                    <div class="h-56 overflow-hidden relative">
+                        <img src="romantille.jpg" alt="Roman Tile Mabati" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                        <div class="absolute top-3 left-3 px-3 py-1 rounded-full bg-industrial-900/80 text-white text-xs font-semibold">Roman Tile - 26G, 28G & 30G</div>
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                            <a href="#contact" class="px-5 py-2 bg-accent-500 text-white text-sm font-bold rounded transform translate-y-4 group-hover:translate-y-0 transition">Inquire Now</a>
+                        </div>
+                    </div>
+                    <div class="p-5 border-t border-gray-100">
+                        <h3 class="font-heading font-bold text-lg text-industrial-900 mb-2">Roman Tile Mabati</h3>
+                        <p class="text-gray-500 text-sm">Decorative tile texture with steel durability for upscale residential developments.</p>
+                    </div>
+                </div>
+
+                <div class="product-item roofing group bg-white rounded-xl overflow-hidden shadow-md hover:shadow-2xl transition duration-300" data-aos="fade-up">
+                    <div class="h-56 overflow-hidden relative">
+                        <img src="eurotile-1.png" alt="Euro Tile Mabati" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                        <div class="absolute top-3 left-3 px-3 py-1 rounded-full bg-industrial-900/80 text-white text-xs font-semibold">Euro Tile - 26G, 28G & 30G</div>
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                            <a href="#contact" class="px-5 py-2 bg-accent-500 text-white text-sm font-bold rounded transform translate-y-4 group-hover:translate-y-0 transition">Inquire Now</a>
+                        </div>
+                    </div>
+                    <div class="p-5 border-t border-gray-100">
+                        <h3 class="font-heading font-bold text-lg text-industrial-900 mb-2">Euro Tile Mabati</h3>
+                        <p class="text-gray-500 text-sm">Premium tiled steel profile with precise pressing and strong anti-corrosion finish.</p>
+                    </div>
+                </div>
+
+                <div class="product-item roofing group bg-white rounded-xl overflow-hidden shadow-md hover:shadow-2xl transition duration-300" data-aos="fade-up" data-aos-delay="60">
+                    <div class="h-56 overflow-hidden relative">
+                        <img src="stonecoat.webp" alt="Stonecoated Roofing" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                        <div class="absolute top-3 left-3 px-3 py-1 rounded-full bg-industrial-900/80 text-white text-xs font-semibold">Stonecoated - 26G, 28G & 30G</div>
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                            <a href="#contact" class="px-5 py-2 bg-accent-500 text-white text-sm font-bold rounded transform translate-y-4 group-hover:translate-y-0 transition">Inquire Now</a>
+                        </div>
+                    </div>
+                    <div class="p-5 border-t border-gray-100">
+                        <h3 class="font-heading font-bold text-lg text-industrial-900 mb-2">Stonecoated Roofing Sheets</h3>
+                        <p class="text-gray-500 text-sm">Textured premium finish that combines aesthetics, noise damping and long life.</p>
+                    </div>
+                </div>
+
+                <div class="product-item roofing group bg-white rounded-xl overflow-hidden shadow-md hover:shadow-2xl transition duration-300" data-aos="fade-up" data-aos-delay="120">
+                    <div class="h-56 overflow-hidden relative">
+                        <img src="roofing-ridges-tile.jpeg" alt="Ridges and Flashings" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                        <div class="absolute top-3 left-3 px-3 py-1 rounded-full bg-industrial-900/80 text-white text-xs font-semibold">Ridges & Flashings</div>
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                            <a href="#contact" class="px-5 py-2 bg-accent-500 text-white text-sm font-bold rounded transform translate-y-4 group-hover:translate-y-0 transition">Inquire Now</a>
+                        </div>
+                    </div>
+                    <div class="p-5 border-t border-gray-100">
+                        <h3 class="font-heading font-bold text-lg text-industrial-900 mb-2">Roofing Ridges & Flashings</h3>
+                        <p class="text-gray-500 text-sm">Complete edge and ridge accessories for watertight, neat, and professional finishes.</p>
+                    </div>
+                </div>
+
+                <div class="product-item roofing group bg-white rounded-xl overflow-hidden shadow-md hover:shadow-2xl transition duration-300" data-aos="fade-up" data-aos-delay="120">
+                    <div class="h-56 overflow-hidden relative">
+                        <img src="rubbers.jpg" alt="Ridges and Flashings" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                        <div class="absolute top-3 left-3 px-3 py-1 rounded-full bg-industrial-900/80 text-white text-xs font-semibold">Ridges & Flashings</div>
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                            <a href="#contact" class="px-5 py-2 bg-accent-500 text-white text-sm font-bold rounded transform translate-y-4 group-hover:translate-y-0 transition">Inquire Now</a>
+                        </div>
+                    </div>
+                    <div class="p-5 border-t border-gray-100">
+                        <h3 class="font-heading font-bold text-lg text-industrial-900 mb-2">Industrial Rubber Washers</h3>
+                        <p class="text-gray-500 text-sm">Weather-sealing rubber products critical for roofing installations to prevent leakage and corrosion.</p>
+                    </div>
+                </div>
+
+                <div class="product-item roofing group bg-white rounded-xl overflow-hidden shadow-md hover:shadow-2xl transition duration-300" data-aos="fade-up" data-aos-delay="180">
+                    <div class="h-56 overflow-hidden relative">
+                        <img src="babycoil.jpg" alt="Baby Coils 30G" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                        <div class="absolute top-3 left-3 px-3 py-1 rounded-full bg-industrial-900/80 text-white text-xs font-semibold">Baby Coil 30G</div>
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                            <a href="#contact" class="px-5 py-2 bg-accent-500 text-white text-sm font-bold rounded transform translate-y-4 group-hover:translate-y-0 transition">Inquire Now</a>
+                        </div>
+                    </div>
+                    <div class="p-5 border-t border-gray-100">
+                        <h3 class="font-heading font-bold text-lg text-industrial-900 mb-2">Baby Coils 30G & 32G</h3>
+                        <p class="text-gray-500 text-sm">Coil stock tailored for roll-forming, trims, and quick-fabrication roofing accessories.</p>
+                    </div>
+                </div>
+
+
+                <div class="product-item steel group bg-white rounded-xl overflow-hidden shadow-md hover:shadow-2xl transition duration-300" data-aos="fade-up" data-aos-delay="60">
+                    <div class="h-56 overflow-hidden relative">
+                        <img src="bars.jpg" alt="Steel Bars" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                            <a href="#contact" class="px-5 py-2 bg-accent-500 text-white text-sm font-bold rounded transform translate-y-4 group-hover:translate-y-0 transition">Inquire Now</a>
+                        </div>
+                    </div>
+                    <div class="p-5 border-t border-gray-100">
+                        <h3 class="font-heading font-bold text-lg text-industrial-900 mb-2">High-Tensile Steel Bars (TMT)</h3>
+                        <p class="text-gray-500 text-sm">Reliable reinforcement bars designed for superior concrete bonding and structural safety.</p>
+                    </div>
+                </div>
+
+                <div class="product-item steel group bg-white rounded-xl overflow-hidden shadow-md hover:shadow-2xl transition duration-300" data-aos="fade-up" data-aos-delay="120">
+                    <div class="h-56 overflow-hidden relative">
+                        <img src="steel.jpg" alt="Square Tubes" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                            <a href="#contact" class="px-5 py-2 bg-accent-500 text-white text-sm font-bold rounded transform translate-y-4 group-hover:translate-y-0 transition">Inquire Now</a>
+                        </div>
+                    </div>
+                    <div class="p-5 border-t border-gray-100">
+                        <h3 class="font-heading font-bold text-lg text-industrial-900 mb-2">Square & Rectangular Tubes</h3>
+                        <p class="text-gray-500 text-sm">SHS and RHS sections for durable fabrication, framing and modern structural design.</p>
+                    </div>
+                </div>
+
+                <div class="product-item wire group bg-white rounded-xl overflow-hidden shadow-md hover:shadow-2xl transition duration-300" data-aos="fade-up" data-aos-delay="180">
+                    <div class="h-56 overflow-hidden relative">
+                        <img src="galvanizedbinding.webp" alt="Galvanized Wire" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                        <div class="absolute top-3 left-3 px-3 py-1 rounded-full bg-industrial-900/80 text-white text-xs font-semibold">Galvanized</div>
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                            <a href="#contact" class="px-5 py-2 bg-accent-500 text-white text-sm font-bold rounded transform translate-y-4 group-hover:translate-y-0 transition">Inquire Now</a>
+                        </div>
+                    </div>
+                    <div class="p-5 border-t border-gray-100">
+                        <h3 class="font-heading font-bold text-lg text-industrial-900 mb-2">Galvanized Binding Wire</h3>
+                        <p class="text-gray-500 text-sm">Corrosion-resistant wire for reinforcement ties, fencing and versatile site applications.</p>
+                    </div>
+                </div>
+
+                <div class="product-item wire group bg-white rounded-xl overflow-hidden shadow-md hover:shadow-2xl transition duration-300" data-aos="fade-up">
+                    <div class="h-56 overflow-hidden relative">
+                        <img src="barbed1.png" alt="Barbed Wire" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                            <a href="#contact" class="px-5 py-2 bg-accent-500 text-white text-sm font-bold rounded transform translate-y-4 group-hover:translate-y-0 transition">Inquire Now</a>
+                        </div>
+                    </div>
+                    <div class="p-5 border-t border-gray-100">
+                        <h3 class="font-heading font-bold text-lg text-industrial-900 mb-2">Galvanized Barbed Wire</h3>
+                        <p class="text-gray-500 text-sm">Heavy-duty perimeter security wire built for all-weather outdoor performance.</p>
+                    </div>
+                </div>
+
+                <div class="product-item wire group bg-white rounded-xl overflow-hidden shadow-md hover:shadow-2xl transition duration-300" data-aos="fade-up" data-aos-delay="60">
+                    <div class="h-56 overflow-hidden relative">
+                        <img src="masonary-nail.jpg" alt="Construction Nails" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                            <a href="#contact" class="px-5 py-2 bg-accent-500 text-white text-sm font-bold rounded transform translate-y-4 group-hover:translate-y-0 transition">Inquire Now</a>
+                        </div>
+                    </div>
+                    <div class="p-5 border-t border-gray-100">
+                        <h3 class="font-heading font-bold text-lg text-industrial-900 mb-2">Construction Nails</h3>
+                        <p class="text-gray-500 text-sm">Reliable nails for roofing, masonry and general fastening with strong bend resistance.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="why-us" class="py-24 bg-industrial-900 text-white relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-1/2 h-full bg-accent-500/5 transform skew-x-12 translate-x-32"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="font-heading font-bold text-4xl mb-4">The Sinai Standard</h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">Why industry leaders and top-tier contractors choose us as their primary supply chain partner.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="p-8 border border-white/10 bg-white/5 backdrop-blur-sm rounded-lg hover:border-accent-500/50 transition-colors group" data-aos="fade-up" data-aos-delay="0">
+                    <div class="w-14 h-14 bg-accent-500/20 flex items-center justify-center rounded-lg mb-6 group-hover:bg-accent-500 transition-colors">
+                        <i class="fa-solid fa-shield-halved text-2xl text-accent-500 group-hover:text-white"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-xl mb-3">Unmatched Quality</h3>
+                    <p class="text-gray-400 text-sm">Every batch of steel and iron is rigorously tested to meet global ISO standards.</p>
+                </div>
+                <div class="p-8 border border-white/10 bg-white/5 backdrop-blur-sm rounded-lg hover:border-accent-500/50 transition-colors group" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-14 h-14 bg-accent-500/20 flex items-center justify-center rounded-lg mb-6 group-hover:bg-accent-500 transition-colors">
+                        <i class="fa-solid fa-tags text-2xl text-accent-500 group-hover:text-white"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-xl mb-3">Direct Pricing</h3>
+                    <p class="text-gray-400 text-sm">By controlling the supply chain, we offer highly competitive factory-direct rates.</p>
+                </div>
+                <div class="p-8 border border-white/10 bg-white/5 backdrop-blur-sm rounded-lg hover:border-accent-500/50 transition-colors group" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-14 h-14 bg-accent-500/20 flex items-center justify-center rounded-lg mb-6 group-hover:bg-accent-500 transition-colors">
+                        <i class="fa-solid fa-truck-fast text-2xl text-accent-500 group-hover:text-white"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-xl mb-3">Rapid Logistics</h3>
+                    <p class="text-gray-400 text-sm">Dedicated fleet ensuring on-time delivery directly to your construction site.</p>
+                </div>
+                <div class="p-8 border border-white/10 bg-white/5 backdrop-blur-sm rounded-lg hover:border-accent-500/50 transition-colors group" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-14 h-14 bg-accent-500/20 flex items-center justify-center rounded-lg mb-6 group-hover:bg-accent-500 transition-colors">
+                        <i class="fa-solid fa-helmet-safety text-2xl text-accent-500 group-hover:text-white"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-xl mb-3">Technical Expertise</h3>
+                    <p class="text-gray-400 text-sm">Consultative sales approach backed by structural engineering knowledge.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-white border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+                <div class="lg:col-span-1" data-aos="fade-right">
+                    <h2 class="font-heading font-bold text-4xl text-industrial-900 mb-4">Built on Trust</h2>
+                    <p class="text-gray-600 mb-6">Results speak for us. Here is what clients say in simple terms.</p>
+                    <a href="#contact" class="font-bold text-accent-500 hover:text-accent-600 flex items-center gap-2">Become a Partner <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-industrial-100 p-8 rounded-lg relative" data-aos="fade-up">
+                        <i class="fa-solid fa-quote-left text-4xl text-gray-300 absolute top-6 right-6"></i>
+                        <p class="text-gray-700 italic mb-6 relative z-10">"Quality was consistent, deliveries were on schedule, and our site stayed on program."</p>
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-industrial-800 rounded-full flex items-center justify-center text-white font-bold font-heading">DR</div>
+                            <div>
+                                <h4 class="font-bold text-industrial-900">David R.</h4>
+                                <p class="text-xs text-gray-500 uppercase tracking-wider">Lead Structural Engineer</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-industrial-100 p-8 rounded-lg relative" data-aos="fade-up" data-aos-delay="100">
+                        <i class="fa-solid fa-quote-left text-4xl text-gray-300 absolute top-6 right-6"></i>
+                        <p class="text-gray-700 italic mb-6 relative z-10">"Pricing was clear, support was fast, and material standards remained high throughout."</p>
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-accent-500 rounded-full flex items-center justify-center text-white font-bold font-heading">SM</div>
+                            <div>
+                                <h4 class="font-bold text-industrial-900">Sarah M.</h4>
+                                <p class="text-xs text-gray-500 uppercase tracking-wider">Procurement Director</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="relative py-20 bg-accent-600 overflow-hidden">
+        <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-20 mix-blend-overlay"></div>
+        <div class="max-w-5xl mx-auto px-4 relative z-10 text-center" data-aos="zoom-in">
+            <h2 class="font-heading font-black text-3xl md:text-5xl text-white mb-6">READY TO SECURE YOUR SUPPLY CHAIN?</h2>
+            <p class="text-white/90 text-lg mb-8 max-w-2xl mx-auto">Get a custom quote for wholesale or project-based orders. Our technical sales team is ready to assist you.</p>
+            <a href="#contact" class="inline-block px-10 py-4 bg-white text-industrial-900 font-bold rounded shadow-xl hover:bg-gray-100 transition-all transform hover:scale-105">Request a Comprehensive Quote</a>
+        </div>
+    </section>
+
+    <section id="contact" class="py-24 bg-industrial-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                <div class="bg-white p-10 rounded-xl shadow-lg border border-gray-100" data-aos="fade-right">
+                    <h3 class="font-heading font-bold text-3xl text-industrial-900 mb-6">Direct Inquiry</h3>
+                    <form>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Company / Name</label>
+                                <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded focus:ring-2 focus:ring-accent-500 focus:border-accent-500 outline-none transition" placeholder="John Doe">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
+                                <input type="email" class="w-full px-4 py-3 border border-gray-300 rounded focus:ring-2 focus:ring-accent-500 focus:border-accent-500 outline-none transition" placeholder="john@company.com">
+                            </div>
+                        </div>
+                        <div class="mb-6">
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Material Interest</label>
+                            <select class="w-full px-4 py-3 border border-gray-300 rounded focus:ring-2 focus:ring-accent-500 focus:border-accent-500 outline-none transition bg-white">
+                                <option>Mabati / Roofing Sheets</option>
+                                <option>Steel Bars / Tubes</option>
+                                <option>Wire Products & Nails</option>
+                                <option>Rubber Accessories</option>
+                                <option>General Procurement</option>
+                            </select>
+                        </div>
+                        <div class="mb-6">
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Project Details</label>
+                            <textarea rows="4" class="w-full px-4 py-3 border border-gray-300 rounded focus:ring-2 focus:ring-accent-500 focus:border-accent-500 outline-none transition" placeholder="Provide estimated quantities or project scope..."></textarea>
+                        </div>
+                        <button type="button" class="w-full py-4 bg-industrial-900 hover:bg-industrial-800 text-white font-bold rounded transition duration-300">Submit Inquiry</button>
+                    </form>
+                </div>
+
+                <div class="flex flex-col justify-between" data-aos="fade-left">
+                    <div>
+                        <h3 class="font-heading font-bold text-3xl text-industrial-900 mb-6">Corporate Headquarters</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow flex-shrink-0">
+                                    <i class="fa-solid fa-location-dot text-accent-500"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-industrial-900">Main Depot & Office</h4>
+                                    <p class="text-gray-600">Industrial Area, Enterprise Road<br>Nairobi, Kenya</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow flex-shrink-0">
+                                    <i class="fa-solid fa-phone text-accent-500"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-industrial-900">Contact Numbers</h4>
+                                    <p class="text-gray-600">+254 700 000 000<br>Sales: +254 711 111 111</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow flex-shrink-0">
+                                    <i class="fa-solid fa-envelope text-accent-500"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-industrial-900">Email Operations</h4>
+                                    <p class="text-gray-600">m.nurie@sinaiindustrieslimited.co.ke<br>sales@sinaiindustrieslimited.co.ke<br>info@sinaiindustrieslimited.co.ke</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8 h-48 w-full bg-gray-300 rounded-lg overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?q=80&w=2074&auto=format&fit=crop" alt="Map View" class="w-full h-full object-cover opacity-60">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <span class="bg-industrial-900 text-white text-xs font-bold px-3 py-1 rounded">Interactive Map Enabled in Prod</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-industrial-900 text-white pt-16 pb-8 border-t-4 border-accent-500">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <a href="#" class="flex items-center gap-2 mb-6">
+                        <i class="fa-solid fa-industry text-accent-500 text-2xl"></i>
+                        <span class="font-heading font-black text-xl tracking-tighter">SINAI<span class="text-accent-500">.</span></span>
+                    </a>
+                    <p class="text-gray-400 text-sm mb-6 leading-relaxed">
+                        Supplying the foundation of tomorrow. Premium construction materials engineered to meet international standards.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-accent-500 transition"><i class="fa-brands fa-linkedin-in text-sm"></i></a>
+                        <a href="#" class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-accent-500 transition"><i class="fa-brands fa-x-twitter text-sm"></i></a>
+                        <a href="#" class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-accent-500 transition"><i class="fa-brands fa-facebook-f text-sm"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="font-heading font-bold text-lg mb-6">Quick Links</h4>
+                    <ul class="space-y-3 text-sm text-gray-400">
+                        <li><a href="#about" class="hover:text-accent-500 transition">About Company</a></li>
+                        <li><a href="#products" class="hover:text-accent-500 transition">Product Catalog</a></li>
+                        <li><a href="#projects" class="hover:text-accent-500 transition">Project Portfolio</a></li>
+                        <li><a href="#" class="hover:text-accent-500 transition">Investor Relations</a></li>
+                        <li><a href="#" class="hover:text-accent-500 transition">Careers</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-heading font-bold text-lg mb-6">Materials</h4>
+                    <ul class="space-y-3 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-accent-500 transition">Roofing & Mabati</a></li>
+                        <li><a href="#" class="hover:text-accent-500 transition">TMT Steel Bars</a></li>
+                        <li><a href="#" class="hover:text-accent-500 transition">Structural Tubes</a></li>
+                        <li><a href="#" class="hover:text-accent-500 transition">Wire & Nails</a></li>
+                        <li><a href="#" class="hover:text-accent-500 transition">Industrial Rubber</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-heading font-bold text-lg mb-6">Price Alerts</h4>
+                    <p class="text-gray-400 text-sm mb-4">Subscribe to our B2B newsletter for monthly steel and material price updates.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Email address" class="w-full px-4 py-2 bg-white/5 border border-white/10 rounded-l focus:outline-none focus:border-accent-500 text-sm">
+                        <button type="button" class="px-4 py-2 bg-accent-500 hover:bg-accent-600 rounded-r transition"><i class="fa-solid fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
+                <p>&copy; <script>document.write(new Date().getFullYear())</script> Sinai Industries Limited. All Rights Reserved.</p>
+                <div class="flex space-x-4 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-white transition">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition">Terms of Trade</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // 1. Remove Loader
+        window.addEventListener('load', () => {
+            const loader = document.getElementById('loader');
+            loader.style.opacity = '0';
+            setTimeout(() => { loader.style.display = 'none'; }, 500);
+        });
+
+        // 2. Initialize AOS Animation
+        AOS.init({
+            once: true,
+            offset: 50,
+            duration: 800,
+            easing: 'ease-out-cubic',
+        });
+
+        // 3. Sticky Glassmorphism Navbar Logic
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('glass-nav', 'py-2');
+                navbar.classList.remove('py-4', 'bg-transparent');
+            } else {
+                navbar.classList.remove('glass-nav', 'py-2');
+                navbar.classList.add('py-4', 'bg-transparent');
+            }
+        });
+
+        // 4. Mobile Menu Toggle
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // 5. Animated Counters Logic (Intersection Observer)
+        const counters = document.querySelectorAll('.counter');
+        const speed = 200; 
+
+        const animateCounters = (entries, observer) => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting) {
+                    const counter = entry.target;
+                    const updateCount = () => {
+                        const target = +counter.getAttribute('data-target');
+                        const count = +counter.innerText;
+                        const inc = target / speed;
+
+                        if (count < target) {
+                            counter.innerText = Math.ceil(count + inc);
+                            setTimeout(updateCount, 20);
+                        } else {
+                            counter.innerText = target;
+                        }
+                    };
+                    updateCount();
+                    observer.unobserve(counter);
+                }
+            });
+        };
+
+        const counterObserver = new IntersectionObserver(animateCounters, { threshold: 0.5 });
+        counters.forEach(counter => counterObserver.observe(counter));
+
+        // 6. Product Filtering Logic
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const productItems = document.querySelectorAll('.product-item');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all
+                filterBtns.forEach(b => {
+                    b.classList.remove('active', 'bg-accent-500', 'text-white');
+                    b.classList.add('text-industrial-800'); // Reset colors
+                });
+                
+                // Add active class to clicked
+                btn.classList.add('active');
+
+                const filterValue = btn.getAttribute('data-filter');
+
+                productItems.forEach(item => {
+                    if (filterValue === 'all' || item.classList.contains(filterValue)) {
+                        item.style.display = 'block';
+                        // Tiny timeout to allow display:block to apply before animating opacity
+                        setTimeout(() => { item.style.opacity = '1'; item.style.transform = 'scale(1)'; }, 50);
+                    } else {
+                        item.style.opacity = '0';
+                        item.style.transform = 'scale(0.9)';
+                        setTimeout(() => { item.style.display = 'none'; }, 300);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
